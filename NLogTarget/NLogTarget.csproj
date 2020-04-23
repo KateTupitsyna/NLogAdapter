@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
  
   <PropertyGroup>
-    <TargetFrameworks>net35;netstandard2.0</TargetFrameworks>
-    <Version>1.1.2</Version>
+    <TargetFrameworks>net35;netstandard1.6</TargetFrameworks>
+    <Version>1.0.8</Version>
     <Authors>Zidium</Authors>
     <Title>Zidium.NLogTarget</Title>
     <Description>Zidium target for NLog</Description>
@@ -10,6 +10,7 @@
     <Product>Zidium</Product>
     <Copyright>Zidium</Copyright>
     <AssemblyName>NLog.ZidiumTarget</AssemblyName>
+    <PackageReleaseNotes>Support both .net standard and .net framework (thanks to github.com/granstel)</PackageReleaseNotes>
   </PropertyGroup>
  
   <ItemGroup Condition="'$(TargetFramework)' == 'net35'">
@@ -20,7 +21,7 @@
     <PackageReference Include="Api.Zidium.Net" Version="1.0.54" />
   </ItemGroup>
  
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.6'">
     <PackageReference Include="Zidium.Api.NetCore" Version="1.0.23" />
   </ItemGroup>
 
